@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=big5" />
+<title>Yam Media Finder - MP3 - Google App Engine</title>
+<meta name="keywords" content="yam, mp3, media, download, dl, 歌曲, 音樂, 下載" />
+<link href="/static/css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" language="javascript" src="/static/javascript/script.js" ></script>
+</head>
+<body>
+<div id="wapper">
+	<div id="queryForm"> 
+		<dl>
+			<dt class="lt"><span class="titletext">URL : </span></dt>
+			<dt class="gt">
+				<input type="text" name="url" id="url" class="inputbox" />
+				<input type="button" name="submit" id="submitButton" value="Query" class="submitbox" onclick="startQuery();" />
+			</dt>
+		</dl>
+	</div>
+	<div id="markForm">
+		<ul>
+			<li>
+				<div>Got MP3 Total Number:</div>
+				<div id="data">{{yamMP3Total}}</div>
+			</li>
+			<li>
+				<div>About Program Detail :</div>
+				<div id="data"><strong>Python+AJAX+JSON Base On Google App Engine (GAE)</strong></div>
+			</li>
+			<li>
+				<div>Support Data Format :</div>
+				<div id="data">MP3</div>
+			</li>
+			<li>
+				<div>Support URL Format  :</div>
+				<div id="data">http://mymedia.yam.com/m/2290488</div>
+			</li>
+			<li>
+				<div>Support WebSite URL :</div>
+				<div id="data"><a href="http://mymedia.yam.com/" target="_blank">http://mymedia.yam.com/</a></div>
+			</li>
+		</ul>
+	</div>
+	<div id="infoForm"></div>
+
+	<div id="searchForm">
+		<div id="box">
+			<input type="text" name="keyword" id="keyword" value="" size="10" />
+			<input type="submit" name="submit" id="submitSearch" value="Search Id" onclick="startSearch()" />
+		</div>
+	</div>
+
+	<div id="listForm">
+		<ul class="title">
+			<li>Page Id</li>
+			<li>Download URL</li>
+			<li>Add Date</li>
+		</ul>
+		<div id="loading">Loading...</div>
+		<div id="dataForm"></div>
+
+		<!--
+		<div style="clear:both">
+			{% if has_previous %} 
+			<a href="?page={{ previous }}"> < < previous {{ page }} </a>
+			{% endif %} 
+
+			{% if has_next %} 
+			<a href="?page={{ next }}"> next >> </a>
+			{% endif %} 
+		</div>
+		-->
+	</div>
+
+	<div id="copyRightForm">
+		Powered Yam Media Finder v 0.3.8.20 - MP3 &copy; 2008 By <a href="http://skhk.uni.cc/">SeekStudio</a>
+	</div>
+</div>
+</body>
+</html>
