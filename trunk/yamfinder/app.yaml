@@ -1,0 +1,16 @@
+application: yamfinder
+version: 0
+runtime: python
+api_version: 1
+
+handlers:
+- url: /static/css
+  static_dir: static/css
+  mime_type: text/css
+
+- url: /static/javascript
+  static_dir: static/javascript
+  mime_type: text/javascript
+
+- url: /.*
+  script: index.py
