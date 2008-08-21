@@ -1,0 +1,40 @@
+/*
+[{
+	"cls":"folder",
+	"id":10,
+	"leaf":false,
+	"children":[
+		{
+			"cls":"file",
+			"id":11,
+			"leaf":true,
+			"children":null,
+			"text":"Type-1"
+		},
+		{
+			"cls":"file",
+			"id":12,
+			"leaf":true,
+			"children":null,
+			"text":"Type-2"
+		}
+	],
+	"text":"Type"
+}]
+*/
+[
+	{
+		"cls":"folder",
+		"id":'WriteBook',
+		"leaf":true,
+		"children":null,
+		"text":"撰寫留言"
+	},
+	{
+		"cls":"folder",
+		"id":'ViewBook',
+		"leaf":true,
+		"children":null,
+		"text":"查看留言"
+	}
+]

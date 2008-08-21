@@ -1,0 +1,72 @@
+#window-about-panel dl {
+	margin: 0;
+	clear:both;
+	padding: 2px;
+}
+#window-about-panel dt {
+	float: left;
+	margin: 0;
+}
+#window-about-panel dd {
+	margin: 0;
+}
+.settings {
+	background-image:url(../extjs/resources/images/shared/icons/fam/folder_wrench.png);
+}
+.nav {
+	background-image:url(../extjs/resources/images/shared/icons/fam/folder_go.png);
+}
+.refresh {
+	background:transparent url(../images/refresh.gif) no-repeat scroll left center !important;
+}
+.copy {
+	background:transparent url(../images/copy.gif) no-repeat scroll left center !important;
+}
+.reply {
+	background:transparent url(../images/reply.gif) no-repeat scroll left center !important;
+}
+.loading-indicator {
+	background-image:url(../images/loading.gif);
+	background-position:left top;
+	background-repeat:no-repeat;
+	font-size:11px;
+	height:18px;
+	padding-left:20px;
+	text-align:left;
+}
+#loading-mask {
+	background-color:white;
+	height:100%;
+	left:0pt;
+	position:absolute;
+	top:0pt;
+	width:100%;
+	z-index:20000;
+}
+#loading {
+	height:auto;
+	left:45%;
+	padding:2px;
+	position:absolute;
+	top:40%;
+	z-index:20001;
+}
+#loading img {
+	margin-bottom:5px;
+}
+#loading .loading-indicator {
+	background:white none repeat scroll 0% 0%;
+	color:#555555;
+	font-family:tahoma,arial,helvetica;
+	font-size:13px;
+	font-size-adjust:none;
+	font-stretch:normal;
+	font-style:normal;
+	font-variant:normal;
+	font-weight:bold;
+	height:auto;
+	line-height:normal;
+	margin:0pt;
+	padding:10px;
+	text-align:center;
+}
