@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="template/error.css" type="text/css" />
+<title>SK-System! Powered By Seek Studio [SKSP]</title>
+</head>
+</head>
+<body>
+% if kind == 'ERR':
+	<script language="javascript">
+	alert('${message}');
+	% if url is not None:
+		window.location='${url}';
+	% endif
+	</script>
+% else:
+	% if url is not None:
+		<script language="javascript">
+		function ref() {
+			window.location='${url}';
+		}
+		setTimeout("ref()",3000);
+		</script>
+	% endif
+	<div id="ctr" align="center">
+		<div class="login">
+			<div align="left"><b>+ Site Message</b></div>
+			<br />
+			<div class="form-block">
+				${message}
+				% if url is not None:
+					<br /><br />
+					<a href="${url}">Please click here if the page does not automatically jump back .... ... .. .</a>
+				% endif
+			</div>
+			</table>
+		</div>
+	</div>
+% endif
+</body>
+</html>
