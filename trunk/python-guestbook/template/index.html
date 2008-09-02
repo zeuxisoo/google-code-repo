@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>${cfg.bookTitle}</title>
+<link rel="stylesheet" href="template/style.css" type="text/css" />
+<link rel="shortcut icon" href="./favicon.ico">
+</head>
+<body>
+<div id="wapper">
+	<form action="${pyself}" method="post">
+	<input type="hidden" name="sk" value="add" />
+	<div id="addForm">
+		<div id="left">
+			<ul>
+				<li class="title">暱稱</li>
+				<li><input type="text" name="username" value="" /></li>
+			</ul>
+			<ul>
+				<li class="title">性別</li>
+				<li>
+					<input type="radio" name="gender" value="1" /> 男生
+					<input type="radio" name="gender" value="2" /> 女生
+				</li>
+			</ul>
+			<ul>
+				<li class="title">標題</li>
+				<li><input type="text" name="title" value="" /></li>
+			</ul>
+		</div>
+		<div id="right">
+			<ul>
+				<li class="c1">&nbsp;</li>
+				<li class="c2">&nbsp;</li>
+				<li class="c3">&nbsp;</li>
+				<li class="c4">&nbsp;</li>
+			</ul>
+		</div>
+		<div id="bottom">
+			<textarea name="message"></textarea>
+			<br />
+			<div id="right">
+				<input type="submit" value="發表言論" class="btnSubmit" />
+			</div>
+		</div>
+	</div>
+	</form>
+
+	<div id="listForm">
+	% for i in mess:
+		<div id="messForm-${i}">
+			<div class="title">標題 : ${mess[i]['title']}</div>
+			<div class="content">
+				<div id="left">
+					暱稱 : ${mess[i]['username']}<br />
+					性別 : <span style="color:${cfg.genderColor[mess[i]['gender']]}">${cfg.genderName[mess[i]['gender']]}</span>
+				</div>
+				<div id="right">
+					${mess[i]['message']}
+				</div>
+			</div>
+			<div id="detail">
+				<div id="date">${mess[i]['addDate']}</div>
+			</div>
+		</div>
+	% endfor
+	</div>
+
+	<div id="pagerForm">
+		${pagebar}
+	</div>
+
+	<div id="copyRightForm">
+		Ver : v0.001 Beta, ProcessTime : ${rt} sec
+		<hr />
+		CopyRight © 2008 By SeekStudio. All Rights Reserved.
+	</div>
+</div>
+</body>
+</html>
