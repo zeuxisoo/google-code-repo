@@ -1,10 +1,8 @@
 # -*- coding: utf8 -*-
 import os, sys
-import CaptchasDotNet
 
 from functions import *
 from time import time, strftime, localtime
-from operator import itemgetter
 
 class guestbook(object):
 	def __init__(self, configure, template, form, runtimer):
